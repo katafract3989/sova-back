@@ -1,7 +1,7 @@
 nelmio_cors:
     defaults:
         origin_regex: true
-        allow_origin: ['localhost:8080']
+        allow_origin: ['*']
         allow_methods: ['GET', 'POST', 'OPTIONS']
         allow_headers: ['X-API-KEY', 'Origin', 'X-Requested-With', 'Content-Type', 'Accept', 'Access-Control-Request-Method']
         expose_headers: ['Link']

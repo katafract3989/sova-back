@@ -51,7 +51,7 @@ class MainController extends AbstractController
             } else {
 
             return new Response(
-                'Access denied',
+                'The username or password is spelled incorrectly',
                 Response::HTTP_FORBIDDEN,
                 ['content-type' => 'application/json']
             );
@@ -59,8 +59,8 @@ class MainController extends AbstractController
         } else {
 
             return new Response(
-                'No content',
-                Response::HTTP_NO_CONTENT,
+                'The user does not exist, please check the correct spelling of the phone number',
+                Response::HTTP_FORBIDDEN,
                 ['content-type' => 'application/json']
             );
         }
